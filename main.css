@@ -1,0 +1,145 @@
+
+
+h1{
+    text-align: center;
+    font-family: verdana,Georgia,Cambria,Times New Roman;
+	color: firebrick;
+	margin-top:20px;
+	margin-bottom:50px;
+}
+h2{
+	text-align: center;
+    font-family: Times New Roman,verdana,Georgia,Cambria;
+	color: Black;
+	font-weight: bold;
+	font-size:150%;	
+	background-color: PowderBlue;
+	margin-left:120px;
+	margin-right:100px
+}
+h3{
+	text-align: center;
+    font-family: Times New Roman,verdana,Georgia,Cambria;	/*Put a number of font types just in case the first font type is not available*/
+	color: black;
+	font-weight: bold;
+	font-size:120%;	
+}
+.navbar {
+    background-color:MediumBlue;
+	
+}
+.navbar-text {
+	text-align: right;
+	font-weight:bold;
+	color:white;
+	font-size: 20px;
+	vertical-align: top;
+}
+	
+.grid-container
+{
+	display: grid;
+	grid-template-columns: auto auto; 		/* gives the number of columns in the grid*/
+	grid-gap: 110px;		
+	margin-right: 100px;
+	margin-left: 120px;
+	padding-bottom:30px;
+}
+	
+.grid-container2, .grid-container3
+{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;		
+	margin-right: 100px;
+	margin-left: 120px;
+	padding-bottom:10px;
+}
+
+.column-left
+{
+ 	width:100%;
+ 	background-color: none;
+ 	display:inline-block;
+	vertical-align: top;
+ 	padding-top:10px;
+	line-height:1.5;			/*spacing between the lines*/
+ }
+  
+.column-right
+{
+ 	width:100%; 	
+	background-color: none;
+	display:inline-block;
+ 	vertical-align: top; 	
+	padding-left:100px;
+ }
+.column-left2, .column-left3
+{
+ 	width:100%;
+ 	background-color: none;
+ 	display:inline-block;
+	vertical-align: top;
+ 	padding-top:10px;
+	line-height:1.5;	
+ } 
+ .column-right2, .column-right3
+{
+ 	width:70%; 	
+	background-color: none;
+	display:inline-block;
+ 	vertical-align: top; 	
+	margin-right:150px
+ }
+.footer
+{
+	font-family: Georgia,Cambria,Times New Roman,Courier;
+	color: white; 
+	display:block;
+	margin-right: 100px;
+	margin-left: 120px;
+	background-color: gray;
+	padding-bottom:20px;
+	padding-top:20px;
+	text-align: justify;
+	
+}
+p{	
+	font-family: Times New Roman,Courier,Lucida Console;
+	text-align: justify;
+	font-size:120%;
+	font-weight: normal; 
+}
+#section1{
+	background-color: none;
+}
+#section2
+{
+	background-image: url:('./pics/hanoi.jpg');
+	background-color: none;
+	background-position: centre;
+	background-size: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before 		/*inserts content before the list items in this case it changes the bullets to a red color.*/
+{
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+/*for the weather widget*/
+.wxlink {
+color: green;
+text-decoration: none;
+}
+.wxlink:hover {
+color: #4caf50;
+text-decoration: underline;
+}
