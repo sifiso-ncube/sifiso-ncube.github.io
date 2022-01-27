@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+	<title>Chatbot Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style3.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?
+		family=Dosis&display=swap" rel="stylesheet">
+		
+	<!-- for the weather widget //-->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Atma:wght@500&display=swap" rel="stylesheet">
+	<script src="https://www.weatherwx.com/js/html5kellycolorpicker.min.js"></script>
+	
+</head>
+
+<body>
+<nav  class="navbar">
+		<img src="pics/logo-unesco.svg">
+		 <div class="navbar-text" > IHE Delft Institute for Water Education </div>
+	</nav >
+<div class ="grid-container-main">
+	
+
+		<h1> Dialogflow Chatbot Demo</h1>
+		<div id="section1">
+			
+			<div class ="grid-container">
+			
+				<div class="column-left">
+					<iframe						
+						allow="microphone;"    	 
+						width="450px"
+						height="600px"
+						src="https://console.dialogflow.com/api-client/demo/embedded/fc929356-a0d4-4a3c-b0c8-d4ff57c371bb">
+					</iframe>
+				</div>
+				<!--An iframe specifies an inline frame. An inline frmae is used to embed another doc within the current html doc. -->
+				<div class= "column-right";>
+					<h2 style= "margin-right: 110px";><i> Helps extract flood related information from a SWMM model </i></h2>
+					
+						<p>This chatbot  extracts information from a SWMM model for the purposes of identifying surcharged and <br> flooded pipes  in the Do Lo-Yen Nghia ward in Hanoi Vietnam. 
+							The chatbot is a prototype to enable easier <br> and faster access  to some SWMM model results. The following can be accessed:
+						</p>
+							<ul>
+								<li>the surcharged pipes in the network </li>
+								<li>the flooded pipes in the network </li>
+								<li>the location of the flooded pipes </li>
+								<li>the time series of depth of water in a pipe </li>
+								<li>the time series of velocity of flow in a pipe </li>
+								<li>the area of the network </li>
+							</ul>
+						<div id= "weather"; >
+							
+							<!-- Begin Widget #5 Code //-->
+							<script src="https://www.weatherwx.com/weather-js/vn/hanoi.js"></script>
+							<!-- End Widget #5 Code //-->
+						</div>	
+				</div>				
+					
+			</div>
+				
+		</div>
+		
+		<div id="section2" >
+			<h2>Study Area</h2>
+			
+			<div class ="grid-container2">
+		
+				<div class="column-left2">
+					<h3><b>Do Lo-Yen Nghia, Ha Dong District, Hanoi, Vietnam</b></h3>
+					<img src='./pics/study_area.png' width="1000" height="600">
+					<p> 
+						Do Lo lies to the south of the Yen Nghia ward in the Ha Dong District of Hanoi, the capital city of Vietnam. 
+						The average temperature is 23&#8451, with the lowest being 5&#8451 and the highest 38&#8451. 
+						Do Lo, Yen Nghia is about 61.5 ha in area and is located next to the Yen Nghia dyke. It is this dyke that protects the area from the Day River which lies to the west of the ward. 
+						The Co Ban channel, located to the South and the East of Do Lo, is the main output of the drainage system.
+						The area is experiencing rapid population growth which in turn puts a strain on the urban infrastructure.
+					<!--&#8451 is the decimal reference of degrees celcius -->
+					</p>
+				</div>
+			
+				<div class="column-right2">
+				<h3> Drainage System </h3>
+				<img src='./pics/study-area1.png' width="300" height="600">
+				</div>
+			</div>
+		</div>
+			
+		<div id="section3" >
+			<h2>Dialogflow Conversational Flow Path</h2>
+			
+			<div class ="grid-container3">
+		
+				<div class="column-left3">
+					<img src='./pics/dialogflow.png'>
+				<p> 
+					<h4>How it works:</h4>
+					When you ask the chatbot a question, the computer understands the query through Natural Language Processing(NLP) methods and matches the query to a particular intent and certain actions are initiated. If the query requires a dynamic response, a fulfilment code is deployed as a webhook or web callback to interface with backend services such as a SWMM model or a database. Through Dialogflow, once the response is obtained, it is returned to the user in natural language that is understandable to them.    	
+					<!--&#8451 is the decimal reference of degrees celcius -->
+				</p>	
+				</div>
+			
+				</div>
+			</div>
+		</div>
+		
+		 
+	<br>
+
+		<div class= "footer">For any feedback or questions contact: 
+			<dl>
+				<dt>snc001@un-ihe.org</dt>
+				<dt>sifisopncube@gmail.com</dt>
+  			</dl> 
+		
+		</div>
+</div>	
+</body>
+</html>
