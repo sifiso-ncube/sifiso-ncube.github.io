@@ -1,0 +1,38 @@
+h1{
+	text-align: center;
+	color: RebeccaPurple;
+}
+
+.grid-container
+{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 0.8fr 1fr;		/* gives the number of columns in the grid*/
+	grid-auto-columns: auto;
+	/*margin: 25px 100px; */					/* top and bottom 25px, right and left 50px*/
+	
+}
+.column-left
+{
+ 	background-color: none;
+ 	display:inline-block;
+	padding-top:10px;
+	padding-left: 30px;
+	line-height:1.5;		/*spacing between the lines*/
+	
+ }
+  
+.column-right
+{
+ 	background-color: none;
+	display:inline-block;
+ 	vertical-align: top; 	
+	
+ }
+ p{	
+	font-family: Times New Roman,Courier,Lucida Console;
+	text-align: justify;
+	font-size:120%;
+	font-weight: normal;
+	line-height:1.5;	
+}
