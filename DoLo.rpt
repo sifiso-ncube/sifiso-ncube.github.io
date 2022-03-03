@@ -1,0 +1,67 @@
+
+  EPA STORM WATER MANAGEMENT MODEL - VERSION 5.1 (Build 5.1.13)
+  --------------------------------------------------------------
+
+  WARNING 04: minimum elevation drop used for Conduit LN59-10
+  WARNING 04: minimum elevation drop used for Conduit LN9-0
+  WARNING 02: maximum depth increased for Node N10-17-1
+  WARNING 02: maximum depth increased for Node N10-31-1
+  WARNING 02: maximum depth increased for Node N11-1
+  WARNING 02: maximum depth increased for Node N11-14-1
+  WARNING 02: maximum depth increased for Node N11-19-1
+  WARNING 02: maximum depth increased for Node N11-26-1
+  WARNING 02: maximum depth increased for Node N11-31-1
+  WARNING 02: maximum depth increased for Node N11-39-1
+  WARNING 02: maximum depth increased for Node N12-13-1
+  WARNING 02: maximum depth increased for Node N12-20-1
+  WARNING 02: maximum depth increased for Node N12-35-1
+  WARNING 02: maximum depth increased for Node N12-45
+  WARNING 02: maximum depth increased for Node N13-18-1
+  WARNING 02: maximum depth increased for Node N13-25-1
+  WARNING 02: maximum depth increased for Node N13-48
+  WARNING 02: maximum depth increased for Node N13-7-1
+  WARNING 02: maximum depth increased for Node N36-16-1
+  WARNING 02: maximum depth increased for Node N42-26-1
+  WARNING 02: maximum depth increased for Node N48-1
+  WARNING 02: maximum depth increased for Node N48-10-1
+  WARNING 02: maximum depth increased for Node N59-31
+  WARNING 02: maximum depth increased for Node N59-43-1
+  WARNING 02: maximum depth increased for Node N59-47-1
+  WARNING 02: maximum depth increased for Node N59-5-1
+  WARNING 02: maximum depth increased for Node N59-8
+  WARNING 02: maximum depth increased for Node N6-16-1
+  WARNING 02: maximum depth increased for Node N66-8-1
+  
+  *********************************************************
+  NOTE: The summary statistics displayed in this report are
+  based on results found at every computational time step,  
+  not just on results from each reporting time step.
+  *********************************************************
+  
+  ****************
+  Analysis Options
+  ****************
+  Flow Units ............... CMS
+  Process Models:
+    Rainfall/Runoff ........ YES
+    RDII ................... NO
+    Snowmelt ............... NO
+    Groundwater ............ NO
+    Flow Routing ........... YES
+    Ponding Allowed ........ YES
+    Water Quality .......... NO
+  Infiltration Method ...... HORTON
+  Flow Routing Method ...... DYNWAVE
+  Surcharge Method ......... EXTRAN
+  Starting Date ............ 10/14/2020 00:00:00
+  Ending Date .............. 10/17/2020 00:00:00
+  Antecedent Dry Days ...... 0.0
+  Report Time Step ......... 00:01:00
+  Wet Time Step ............ 00:01:00
+  Dry Time Step ............ 00:01:00
+  Routing Time Step ........ 0.50 sec
+  Variable Time Step ....... YES
+  Maximum Trials ........... 8
+  Number of Threads ........ 1
+  Head Tolerance ........... 0.001500 m
+  
