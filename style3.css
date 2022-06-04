@@ -5,17 +5,17 @@ h1{
     font-family: verdana,Georgia,Cambria,Times New Roman;
 	color: firebrick;
 	margin-top:20px;
-	margin-bottom:50px;
+	margin-bottom:30px;
 }
 h2{
 	text-align: center;
     font-family: Times New Roman,verdana,Georgia,Cambria;
-	color: Black;
+	color: MediumBlue;
 	font-weight: bold;
 	font-size:150%;	
 	background-color: PowderBlue;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	/*padding-bottom: 20px;*/
 }
 h3{
 	text-align: center;
@@ -26,6 +26,7 @@ h3{
 }
 .navbar {
     background-color:MediumBlue;
+	width: 100%
 	
 }
 .navbar-text {
@@ -45,8 +46,8 @@ margin-right: 90px;
 .grid-container
 {
 	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 0.8fr 1fr;		/* gives the number of columns in the grid*/
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;		/* gives the number of columns in the grid*/
 	grid-auto-columns: auto;
 	/*margin: 25px 100px; */					/* top and bottom 25px, right and left 50px*/
 	
@@ -71,27 +72,29 @@ margin-right: 90px;
 {
  	background-color: none;
  	display:inline-block;
-	padding-top:10px;
+	/*padding-top:10px;*/
 	line-height:1.5;		/*spacing between the lines*/
-	
+	vertical-align: top;
  }
   
 .column-right
 {
  	background-color: none;
 	display:inline-block;
- 	vertical-align: top; 	
+ 	vertical-align: top;
+	margin-top:20px;
+	/*padding-left : 10px*/	
 	
  }
 #weather
 {
 	font-family: 'Roboto', sans-serif;
 	line-height: 26px; 
-	margin-top: 10px; 
-	max-width: 80%;
-	position: right;
+	margin-top: 30px !important; 
+	max-width: 100%;
+	
 }
-.column-left2, .column-left3		/*for the 2nd and 3rd sections*/
+.column-left2, .column3		/*for the 2nd and 3rd sections*/
 {
  	background-color: none;
  	display:inline-block;
@@ -105,17 +108,18 @@ margin-right: 90px;
  	vertical-align: top; 	
 	
 }
-img{
-	max-width: 100%;
-	height: auto;
-}
 
+/*img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}*/
 .footer
 {
 	font-family: Georgia,Cambria,Times New Roman,Courier;
-	color: white; 
+	color: black; 
 	display:block;
-	background-color: gray;
+	background-color: LightGray;
 	padding-bottom:20px;
 	padding-top:20px;
 	text-align: justify;
@@ -142,8 +146,7 @@ p{
 }
 
 ul {
-  
-  font-size: 100%
+   font-size: large;
 }
 
 ul li::before 		/*inserts content before the list items in this case it changes the bullets to a red color.- unordered list*/
@@ -167,4 +170,8 @@ text-decoration: none;
 .wxlink:hover {
 color: #4caf50;
 text-decoration: underline;
+}
+iframe{
+	margin-bottom: 20px;
+	/*margin-top: 20px;*/
 }
