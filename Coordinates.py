@@ -13,5 +13,6 @@ for num in range(7670, 7839):
     x_coord = filteredList[1]
     y_coord = filteredList[2]
     #print(node)
-    print(x_coord)
-    print(y_coord)
+    #print(x_coord)
+    #print(y_coord)
+    #print(node, x_coord, y_coord)

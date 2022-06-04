@@ -19,7 +19,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import numpy as np
 
-sim = Simulation(r"./15.10.1realday.inp")              #r means treat as raw string
+sim = Simulation(r"./DoLo.inp")              #r means treat as raw string
 
 ##Running the model
 # after running the model it generates a report (.rpt)
@@ -31,7 +31,7 @@ simulate()
 ##NODES (tested using node N33-1)
 # Number of Nodes
 def Ex_nmbr_nodes():
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
     number_of_nodes = len(out.nodes)
     return number_of_nodes
 
@@ -40,7 +40,7 @@ print("The number of nodes is: ", Ex_nmbr_nodes())
 # Nodes IDs
 # returns a dictionary of model node names with their indices as values
 def Ex_node_ids():
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
     ids = out.nodes
     return ids
 
@@ -49,7 +49,7 @@ print(Ex_node_ids())
 #Node Attributes -For all nodes at given time, get a particular attribute. -returns a dictionary of attribute values for all nodes at given timestep
 
 #Node Flooding Rate
-sim = Simulation(r"./15.10.1realday.inp")
+sim = Simulation(r"./DoLo.inp")
 def Ex_nodeFlood_rate(node_name):
     nodeflood = Nodes(sim)[node_name]
     nodfloodlst= []
@@ -60,7 +60,7 @@ def Ex_nodeFlood_rate(node_name):
         time.append(sim.current_time)
     return nodfloodlst, time
 
-node_name = input ("Enter the point (node) of interest: ")
+node_name = "N33-1"
 
 nodfloodlst, time = Ex_nodeFlood_rate(node_name)
 font = {'family': 'serif',
@@ -82,7 +82,7 @@ plt.show()
 # For all nodes at given time, get the ponded volume.
 # returns a dictionary of attribute values for all nodes at given timestep
 def Ex_ponded_volume():
-    with Output('15.10.1realday.out') as out:
+    with Output('DoLo.out') as out:
         data = out.node_attribute(NodeAttribute.PONDED_VOLUME, datetime(2020, 10, 15, 21))
         node_pondvol = []
         index_list = []
@@ -119,7 +119,7 @@ plt.show()
 #Node Time series for ponded volume. you specify the start and end time
 # Returns a dictionary of attribute values with between start_index and end_index with reporting timesteps as keys
 def Ex_node_pondedvol(node_name):
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
       ts = out.node_series(node_name, NodeAttribute.PONDED_VOLUME, datetime(2020, 10, 15, 12), datetime(2020, 10, 16, 12))
       ts_node_pondedvol = []
       index_list= []
@@ -130,7 +130,7 @@ def Ex_node_pondedvol(node_name):
       return ts_node_pondedvol,index_list
 
 
-node_name = input ("Enter the point (node) of interest: ")
+node_name = "N33-1"
 
 ts_node_pondedvol,index_list = Ex_node_pondedvol(node_name)   # assigning the function outputs to the list variables
 
@@ -153,7 +153,7 @@ plt.show()
 #returns a dictionary of attributes for a node at given timestep
 
 def Ex_node_attributes(node_name):
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
       data = out.node_result(node_name, datetime(2020, 10, 15, 21))
       index_list= []
       node_attr = []
@@ -164,7 +164,7 @@ def Ex_node_attributes(node_name):
          #print(object, data[object])
 
 
-node_name = input ("Enter the point (node) of interest: ")
+node_name ="N33-1"
 
 node_attr, index_list = Ex_node_attributes(node_name)       #assigning the function outputs to the list variables
  ## make a table
@@ -173,7 +173,7 @@ print(node_attr, index_list)
 ##SUBCATCHMENT ATTRIBUTES
 #Subcatchment IDs
 def Ex_subcatchment_ids():
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
     subctmts = out.subcatchments
     return subctmts
 
@@ -181,7 +181,7 @@ Ex_subcatchment_ids()
 
 #Runoff Rate- Get the runoff rate for all subcatchments at a given time.
 def Ex_runoff_rate():
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
     runoff_rate = []
     index_list= []
     data = out.subcatch_attribute(SubcatchAttribute.RUNOFF_RATE, datetime(2020, 10, 15, 21))
@@ -212,7 +212,7 @@ plt.show()
 #Subcatchment Time series for rainfall. you specify the start and end time
 # Returns a dictionary of attribute values with between start_index and end_index with reporting timesteps as keys
 def Ex_ts_rainfall(subctmt_name):
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
       ts = out.subcatch_series(subctmt_name, SubcatchAttribute.RAINFALL, datetime(2020, 10, 15, 12), datetime(2020, 10, 16, 12))
       ts_rainfall = []
       index_list= []
@@ -223,7 +223,7 @@ def Ex_ts_rainfall(subctmt_name):
       return ts_rainfall,index_list
 
 
-subctmt_name = input ("Enter the area of interest: ")
+subctmt_name = 'SU36-1'
 
 ts_rainfall,index_list = Ex_ts_rainfall(subctmt_name)   # assigning the function outputs to the list variables
 
@@ -245,7 +245,7 @@ plt.show()
 #Subcatchment Time series for runoff rate. you specify the start and end time
 # Returns a dictionary of attribute values with between start_index and end_index with reporting timesteps as keys
 def Ex_ts_runoffrate(subctmt_name):
-  with Output('15.10.1realday.out') as out:
+  with Output('DoLo.out') as out:
       ts = out.subcatch_series(subctmt_name, SubcatchAttribute.RUNOFF_RATE, datetime(2020, 10, 15, 12), datetime(2020, 10, 16, 12))
       ts_runoffrate = []
       index_list= []
@@ -256,7 +256,7 @@ def Ex_ts_runoffrate(subctmt_name):
       return ts_runoffrate,index_list
 
 
-subctmt_name = input ("Enter the area of interest: ")
+subctmt_name = 'SU36-1'
 
 ts_runoffrate,index_list = Ex_ts_runoffrate(subctmt_name)   # assigning the function outputs to the list variables
 
@@ -276,7 +276,7 @@ plt.show()
 
 #Get all the System Attributes for a particular subcatchment at a given time
 def syst_attr():
-    with Output('15.10.1realday.out') as out:
+    with Output('DoLo.out') as out:
         data = out.system_result(datetime(2020, 10, 15, 21))
         for attribute in data:
             print(attribute, data[attribute])

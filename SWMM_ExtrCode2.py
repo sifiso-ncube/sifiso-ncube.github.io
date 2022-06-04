@@ -3,9 +3,9 @@ This Code Extracts Flood-related parameters from the SWMM Model. The following f
 1. Run the model
 2. Node flooding rate
 3. Ponded Volume for all Nodes at a given time
-4. Time series ponded volume for s given node
+4. Time series ponded volume for a given node
 5. Ts Rainfall over a given subcatchment
-6.  Runoff rate for all subcatchments at a fixed time
+6. Runoff rate for all subcatchments at a fixed time
 7. Ts runoff rate for a given subcatchment
 8. Node attributes- attributes for a node at given timestep
 9. Node IDs
