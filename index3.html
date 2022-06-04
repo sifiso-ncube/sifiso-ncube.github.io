@@ -17,47 +17,49 @@
 
 <body>
 <nav  class="navbar">
-		<img src="pics/logo-unesco.svg">
+		<img src="logo-unesco.svg">
 		 <div class="navbar-text" > IHE Delft Institute for Water Education </div>
 	</nav >
 <div class ="grid-container-main">
 	
 
-		<h1> Dialogflow Chatbot Demo</h1>
+		<h1> SWMMBot App Demonstration</h1>
 		<div id="section1">
 			
 			<div class ="grid-container">
 			
 				<div class="column-left">
-					<iframe
-						allow="microphone;"
-						width="450"
-						height="600"
-						src="https://console.dialogflow.com/api-client/demo/embedded/0e2c50af-bc3b-4b74-b5e4-91708b0df99f">
-					</iframe>
-				</div>
-				<!--An iframe specifies an inline frame. An inline frmae is used to embed another doc within the current html doc. -->
-				<div class= "column-right";>
-					<h2 style= "margin-right: 110px";><i> Helps extract flood related information from a SWMM model </i></h2>
+					<h2><i> A chatbot that provides flood related information from a SWMM model </i></h2>
 					
-						<p>This chatbot  extracts information from a SWMM model for the purposes of identifying flooded areas in the Do Lo-Yen Nghia ward in Hanoi Vietnam. 
-							The chatbot is a prototype to enable easier <br> and faster access  to some SWMM model results. The following can be accessed:
+						<p >This chatbot is meant to provide information on the flooding situation at your location in Do Lo-Yen Nghia ward in Hanoi, Vietnam.The data used in the simulation was for an 84.8mm total rainfall event falling between 15-16 October 2020. The following can be accessed from the chatbot:
 						</p>
 							<ul>
-								<li>the flooded areas in the network </li>
-								<li>the flooding duration at the different areas</li>
-								<li>the maximum flood depth</li>
+								<li>whether a location is flooded or not,</li>
+								<li>the maximum flood depth,</li>
+								<li>its flooding duration, </li>								
+								<li>the time at which there will be maximum flooding,</li>
 								<li>the maximum flooding rate</li>
-								<li>the flooding rate at different locations</li>
-								<li>the flactuation of the volume of the flood water at a point</li>
-								
-							</ul>
+								<li>tips on what to do during a flood</li>								
+							</ul>	
+						<img src='what_to_do.png' style="width:60%" height="300">
 						<div id= "weather"; >
-							
-							<!-- Begin Widget #5 Code //-->
+								<!-- Begin Widget #6 Code //-->
+							<div style="width:100%; max-width: 600px;margin-top: 30px; font-family: 'Kaushan Script', cursive;">
 							<script src="https://www.weatherwx.com/weather-js/vn/hanoi.js"></script>
-							<!-- End Widget #5 Code //-->
-						</div>	
+						</div>
+								<!-- End Widget #6 Code //-->
+						</div>							
+				</div>
+				<!--An iframe specifies an inline frame. An inline frame  is used to embed another doc within the current html doc. -->
+				<div class= "column-right";>											
+						<iframe
+						allow="microphone;"
+						width="100%"
+						height="50%"
+						src="https://console.dialogflow.com/api-client/demo/embedded/0e2c50af-bc3b-4b74-b5e4-91708b0df99f">						
+						</iframe>
+						<iframe src="https://www.google.com/maps/d/u/0/embed?mid=13NdZRLnqJpzDPrw9djrl6s92-ywycB01&ehbc=2E312F" width="90%" height="480">
+						</iframe>
 				</div>				
 					
 			</div>
@@ -68,25 +70,28 @@
 			<h2>Study Area</h2>
 			
 			<div class ="grid-container2">
-		
+			
 				<div class="column-left2">
 					<h3><b>Do Lo-Yen Nghia, Ha Dong District, Hanoi, Vietnam</b></h3>
-					<img src='./pics/study_area.png' width="1000" height="600">
-					<p> 
-						Do Lo lies to the south of the Yen Nghia ward in the Ha Dong District of Hanoi, the capital city of Vietnam. 
-						The average temperature is 23&#8451, with the lowest being 5&#8451 and the highest 38&#8451. 
-						Do Lo, Yen Nghia is about 61.5 ha in area and is located next to the Yen Nghia dyke. It is this dyke that protects the area from the Day River which lies to the west of the ward. 
-						The Co Ban channel, located to the South and the East of Do Lo, is the main output of the drainage system.
-						The area is experiencing rapid population growth which in turn puts a strain on the urban infrastructure.
-					<!--&#8451 is the decimal reference of degrees celcius -->
-					</p>
-				</div>
+					<img src='study_site.png' width="1000" height="600">
+					</div>
 			
 				<div class="column-right2">
-				<h3> Drainage System </h3>
-				<img src='./pics/study-area1.png' width="300" height="600">
+					<h3> The Drainage System </h3>
+					<img src='study-area1.png' width="350" height="600">
 				</div>
+				
 			</div>
+			<div>
+					<p> 
+							Do Lo lies to the south of the Yen Nghia ward in the Ha Dong District of Hanoi, the capital city of Vietnam. 
+							The average temperature is 23&#8451, with the lowest being 5&#8451 and the highest 38&#8451. The map on the right shows some of the flooded areas for the rains that fell between 15-16 October 2020.  
+							Do Lo, Yen Nghia is about 61.5 ha in area and is located next to the Yen Nghia dyke. It is this dyke that protects the area from the Day River which lies to the west of the ward. 
+							The Co Ban channel, located to the South and the East of Do Lo, is the main output of the drainage system. The drainage system consists mostly of rectangular open channels and circular pipes below roads. 
+							The area is experiencing rapid population growth which in turn puts a strain on the drainage infrastructure.
+						<!--&#8451 is the decimal reference of degrees celcius -->
+					</p>
+				</div>
 		</div>
 			
 		<div id="section3" >
@@ -94,13 +99,15 @@
 			
 			<div class ="grid-container3">
 		
-				<div class="column-left3">
-					<img src='./pics/dialogflow.png'>
+				<div class="column3">
+					<img src='dialogflow.png' class="center" style= "display: block;
+					  margin-left: auto;
+					  margin-right: auto;"> <!--this centres the image -->
 				 
 					<h4>How it works:</h4>
 					<p>	
-						When you ask the chatbot a question, the computer understands the query through Natural Language Processing(NLP) methods and matches the query to a particular intent and certain actions are initiated. If the query requires a dynamic response, a fulfilment code is deployed as a webhook or web callback to interface with backend services such as a SWMM model or a database. Through Dialogflow, once the response is obtained, it is returned to the user in natural language that is understandable to them.    	
-						<!--&#8451 is the decimal reference of degrees celcius -->
+						When you ask the chatbot a question, the computer understands it through Natural Language Processing(NLP) methods and matches it to a particular intent and an action is initiated. If the question requires a dynamic response, a query request/fulfilment code is sent as a webhook or web callback which links with functions that extract data from the SWMM model. The webhook is also connected to a database where the location name that you enter will be stored. After processing the result, a response to your question is then sent back through the webhook to Dialogflow, where it is transformed back and returned to you in natural language that is understandable to you.    	
+						
 					</p>	
 				</div>
 			
@@ -108,18 +115,14 @@
 			</div>
 		</div>
 		
-		<div id="section4" >
-		<iframe src="https://www.google.com/maps/d/embed?mid=1VvkpuLmlvVHLYmgvwJo0j7WWI93YowRz&hl=en&ehbc=2E312F" width="640" height="480">
-		</iframe>			
-		</div>
-		 
-	<br>
+		<br>
 
-		<div class= "footer">For any feedback or questions contact: 
+		<div class= "footer"><b>For any feedback or questions contact:</b> 
 			<dl>
-				<dt>snc001@un-ihe.org</dt>
-				<dt>sifisopncube@gmail.com</dt>
+				<dt><a href="https://forms.gle/cLGTLvSM1WQsoDav9">Feedback Questionnairre</a> </dt>
+				<dt><a href="mailto:sifisopncube@gmail.com">sifisopncube@gmail.com</a></dt>
   			</dl> 
+			
 		
 		</div>
 </div>	
